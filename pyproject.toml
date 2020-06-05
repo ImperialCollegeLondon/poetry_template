@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "SPARTA Control"
+name = "SPARTA_control"
 version = "0.1.0"
 description = ""
 authors = ["Research Computing Service, Imperial College London <rcs-support@imperial.ac.uk>"]
