@@ -5,8 +5,7 @@
 
 ## Installation instructions
 
-- Requirements: [Python (we will use version 3.8)](https://www.python.org
-/) and Git. The latter is usually already available in MacOS and Linux
+- Requirements: [Python (we will use version 3.8)](https://www.python.org) and Git. The latter is usually already available in MacOS and Linux
  systems or can be installed from their package managers. For Windows, you can 
  get it from [here](https://git-scm.com/).
 - [Download and install Poetry](https://python-poetry.org/docs/#installation) 
