@@ -45,9 +45,9 @@ jobs:
     - name: Install SPARTA Control Windows
       if: matrix.os == 'windows-latest'
       run: |
-        $HOME/.poetry/bin/poetry install
+        $HOME\.poetry\bin\poetry install
       
     - name: Test with pytest Windows
       if: matrix.os == 'windows-latest'
       run: |
-        $HOME/.poetry/bin/poetry run pytest
+        $HOME\.poetry\bin\poetry run pytest
