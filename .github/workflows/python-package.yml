@@ -15,7 +15,7 @@ jobs:
         python-version: [3.8]
       
     env:
-      PATH: "$HOME/.poetry/bin:$PATH"
+      PATH: "$PATH:$HOME/.poetry/bin"
 
     steps:
     - uses: actions/checkout@v2
