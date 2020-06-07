@@ -21,33 +21,13 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     
-    - name: Install Poetry Linux
-      if: matrix.os == 'ubuntu-latest'
-      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+    - name: Install Poetry
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install --user poetry
     
-    - name: Install SPARTA Control Linux
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        export PATH=$HOME/.poetry/bin:$PATH
-        poetry install
+    - name: Install SPARTA Control
+      run: poetry install
       
-    - name: Test with pytest Linux
-      if: matrix.os == 'ubuntu-latest'
-      run: |
-        export PATH=$HOME/.poetry/bin:$PATH
-        poetry run pytest
-    
-    - name: Install Poetry Windows
-      if: matrix.os == 'windows-latest'
-      run: (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python
-      shell: powershell
-      
-    - name: Install SPARTA Control Windows
-      if: matrix.os == 'windows-latest'
-      run: |
-        $HOME\.poetry\bin\poetry install
-      
-    - name: Test with pytest Windows
-      if: matrix.os == 'windows-latest'
-      run: |
-        $HOME\.poetry\bin\poetry run pytest
+    - name: Test with pytest
+      run: poetry run pytest
