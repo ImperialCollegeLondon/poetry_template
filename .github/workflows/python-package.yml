@@ -45,13 +45,13 @@ jobs:
     - name: Install SPARTA Control Windows
       if: matrix.os == 'windows-latest'
       run: |
-        env:Path += "%USERPROFILE%\.poetry\bin"
+        $env:Path += "%USERPROFILE%\.poetry\bin"
         poetry install
       shell: powershell
       
     - name: Test with pytest Windows
       if: matrix.os == 'windows-latest'
       run: |
-        env:Path += "%USERPROFILE%\.poetry\bin"
+        $env:Path += "%USERPROFILE%\.poetry\bin"
         poetry run pytest
       shell: powershell
