@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "SPARTA_control"
+version = "0.1.0"
+description = ""
+authors = ["Research Computing Service, Imperial College London <rcs-support@imperial.ac.uk>"]
+readme = "README.md"
+homepage = "https://github.com/ImperialCollegeLondon/SPARTA_control"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
