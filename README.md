@@ -21,38 +21,46 @@ git clone https://github.com/ImperialCollegeLondon/SPARTA_control.git
 poetry install
 ```
 
+### Virtual environment
+
 The last command will create a virtual environment with all the required
- dependencies for SPARTA Control. At this point, SPARTA Control is ready for
-  you to work on it. 
+ dependencies for SPARTA Control. However, this environment is deactivated. It
+  can be activated by running in the terminal (or PowerShell):
+  
+```bash
+poetry shell
+```
+
+At this point, SPARTA Control is ready for you to work on it. If you do not
+ activate the environment, any python-related command you want to run for the
+  project will need to be preceded by `poetry run`.
+  
+From now on, it will be assumed that the virtual environment is activated.
+  
+### Pre-commit
+
+SPARTA Control uses `pre-commit` to run a few tools before every commit to
+ make sure that the code follows some standards, as well as other checks. To
+  enable this, run the following command in the terminal (or PowerShell):
+  
+```bash
+pre-commit
+```
   
 ## Using SPARTA Control
 
-If you have the virtual environment activated (you can activate it by running
- `poetry shell`), just execute in the terminal - or PowerShell in windows:
+Just execute in the terminal - or PowerShell in windows:
 
 ```bash
 python -m sparta_control
 ```
 
-At the moment, the only thing this does is printing the version information. 
-
-If you don't have the environment activated you can run:
-
-```bash
-poetry run python -m sparta_control
-```
+At the moment, the only thing this does is printing the version information.
 
 ## Testing SPARTA Control
 
-Tests can be run in a similar way, depending on whether the environment is
- activated or not. In the first case, it is enough to run:
+Tests can be run in a similar way, being enough to run:
  
 ```bash
 pytest
-```
-
-Otherwise, the following will do:
-
-```bash
-poetry run pytest
 ```
