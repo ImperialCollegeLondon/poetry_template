@@ -10,7 +10,7 @@ Welcome to SPARTA Control's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   about
 
 Indices and tables
 ==================
