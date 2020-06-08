@@ -33,6 +33,4 @@ jobs:
       run: python -m poetry run pytest
 
     - name: Build documentation
-      uses: ammaraskar/sphinx-action@master
-      with:
-        build-command: "python -m poetry run sphinx-build -b html docs/source/ docs/build/"
+      run: python -m poetry run sphinx-build -b html docs/source/ docs/build/
