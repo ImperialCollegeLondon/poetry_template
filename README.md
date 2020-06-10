@@ -55,7 +55,7 @@ Just execute in the terminal - or PowerShell in windows:
 python -m sparta_control
 ```
 
-At the moment, the only thing this does is printing the version information.
+At the moment, the only thing this does is print the version information.
 
 ## Testing SPARTA Control
 
