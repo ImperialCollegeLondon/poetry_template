@@ -31,3 +31,6 @@ jobs:
       
     - name: Test with pytest
       run: python -m poetry run pytest
+
+    - name: Build documentation
+      run: python -m poetry run sphinx-build -b html docs/source/ docs/build/
