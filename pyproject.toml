@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "SPARTA_control"
-version = "0.2.0"
+name = "poetry_template"
+version = "0.1.0"
 description = ""
 authors = ["Research Computing Service, Imperial College London <rcs-support@imperial.ac.uk>"]
 readme = "README.md"
-homepage = "https://github.com/ImperialCollegeLondon/SPARTA_control"
+homepage = "https://github.com/ImperialCollegeLondon/poetry_template"
 
 [tool.poetry.dependencies]
 python = "^3.8"

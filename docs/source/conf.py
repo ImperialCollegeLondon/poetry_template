@@ -15,18 +15,18 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join("..", "..")))
 from datetime import datetime  # noqa: E402
-import sparta_control  # noqa: E402
+import poetry_template  # noqa: E402
 
 # -- Project information -----------------------------------------------------
 
-project = "SPARTA Control"
+project = "Poetry Template"
 copyright = (
     f"{datetime.today().year}, Research Computing Service, Imperial College London"
 )
 author = "Research Computing Service, Imperial College London"
 
 # The full version, including alpha/beta/rc tags
-release = sparta_control.__version__
+release = poetry_template.__version__
 
 
 # -- General configuration ---------------------------------------------------

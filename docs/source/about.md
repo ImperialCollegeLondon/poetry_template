@@ -1,3 +1,3 @@
-# About SPARTA Control
+# About Poetry Template
 
 This is just a test file.

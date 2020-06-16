@@ -1,66 +1,56 @@
-# SPARTA Control
+# Poetry Template
 
-*Note: The final application will be a standalone pice of software. The
- instructions below are just for development.*
+![build status](../../workflows/ci/badge.svg)
 
-## Installation instructions
+This is a minimal Python 3.8 application that uses [poetry](https://python-poetry.org) for packaging and dependency management. It also provides [pre-commit](https://pre-commit.com/) hooks (for [Black](https://black.readthedocs.io/en/stable/) and [Flake8](https://flake8.pycqa.org/en/latest/)) and automated tests using [pytest](https://pytest.org/), [Coverage.py](https://coverage.readthedocs.io/) and [GitHub Actions](https://github.com/features/actions). Documentation can be generated with [Sphinx](https://www.sphinx-doc.org/en/master/), and version numbers updated with [bump2version](https://github.com/c4urself/bump2version). It was developed by the [Imperial College Research Computing Service](https://www.imperial.ac.uk/admin-services/ict/self-service/research-support/rcs/) while developing the control software for the [SPARTA](https://www.nature.com/articles/s41467-018-06397-6) system.
 
-- Requirements: [Python (we will use version 3.8)](https://www.python.org) and Git. The latter is usually already available in MacOS and Linux
- systems or can be installed from their package managers. For Windows, you can 
- get it from [here](https://git-scm.com/).
-- [Download and install Poetry](https://python-poetry.org/docs/#installation) 
-following the instructions for your OS.
-- Clone this repository with:
+To use this repository as a template for your own application:
 
-```bash
-git clone https://github.com/ImperialCollegeLondon/SPARTA_control.git
-```
-- Enter into the `SPARTA_control` directory and run:
+1. [Download and install Poetry](https://python-poetry.org/docs/#installation) following the instructions for your OS.
+1. Click the green "Use this template" button above
+1. Name and create your repository
+1. Clone your new repository and make it your working directory
+1. Replace instances of `poetry_template` with your own application name. Edit:
+   - `pyproject.toml`
+   - `tests/test_poetry_template.py`
+   - The `poetry_template` directory name and `poetry_template/__main__.py`
+   - `docs/source/conf.py`
+   - `setup.cfg`
+1. Set up the virtual environment:
 
-```bash
-poetry install
-```
+   ```bash
+   poetry install
+   ```
 
-### Virtual environment
+1. Activate the virtual environment (alternatively, ensure any python-related command is preceded by `poetry run`):
 
-The last command will create a virtual environment with all the required
- dependencies for SPARTA Control. However, this environment is deactivated. It
-  can be activated by running in the terminal (or PowerShell):
-  
-```bash
-poetry shell
-```
+   ```bash
+   poetry shell
+   ```
 
-At this point, SPARTA Control is ready for you to work on it. If you do not
- activate the environment, any python-related command you want to run for the
-  project will need to be preceded by `poetry run`.
-  
-From now on, it will be assumed that the virtual environment is activated.
-  
-### Pre-commit
+1. Install the git hooks:
 
-SPARTA Control uses `pre-commit` to run a few tools before every commit to
- make sure that the code follows some standards, as well as other checks. To
-  enable this, run the following command in the terminal (or PowerShell):
-  
-```bash
-pre-commit
-```
-  
-## Using SPARTA Control
+   ```bash
+   pre-commit install
+   ```
 
-Just execute in the terminal - or PowerShell in windows:
+1. Run the main app:
 
-```bash
-python -m sparta_control
-```
+   ```bash
+   python 
+   ```
 
-At the moment, the only thing this does is print the version information.
+1. Run the tests:
 
-## Testing SPARTA Control
+   ```bash
+   pytest
+   ```
 
-Tests can be run in a similar way, being enough to run:
- 
-```bash
-pytest
-```
+1. Build the documentation:
+
+   ```bash
+   sphinx-build -b html docs/source/ docs/build/
+   ```
+
+1. Edit/replace `.py` files, `setup.cfg` and `.github/workflows/python-package.yml` as required.
+1. Add new requirements with `poetry add` or by manually adding them to `pyproject.toml`

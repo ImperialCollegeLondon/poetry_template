@@ -26,7 +26,7 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install poetry
     
-    - name: Install SPARTA Control
+    - name: Install Application
       run: python -m poetry install
       
     - name: Test with pytest
