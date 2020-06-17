@@ -54,3 +54,5 @@ To use this repository as a template for your own application:
 
 1. Edit/replace `.py` files, `setup.cfg` and `.github/workflows/python-package.yml` as required.
 1. Add new requirements with `poetry add` or by manually adding them to `pyproject.toml`
+
+For a more traditional `pip`-based project template, try [Pytest Application Template](https://github.com/ImperialCollegeLondon/pytest_template_application).
